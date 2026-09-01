@@ -3,6 +3,7 @@
 - Este proyecto fue generado utilizando [Angular CLI](https://github.com/angular/angular-cli) 20.3.14.
 
 - El objetivo del taller es practicar la creación y organización de módulos y componentes en una aplicación Angular.
+- Se consume una API externa pública: Sekai World Character Database.
 
 ## 📋 Requisitos Previos
 
@@ -40,6 +41,14 @@ Cuando el servidor esté en ejecución, abre un navegador y accede a: `http://lo
 ## 🧪 Pruebas Unitarias
 
 El proyecto utiliza Jest para la ejecución de pruebas unitarias.
+
+El 98%+ de cobertura de código se logra gracias a los tests del servicio CharactersService y los componentes principales.
+
+## 📚 APIs Consumidas
+
+- **Sekai World Character Database**: `https://sekai-world.github.io/sekai-master-db-en-diff/gameCharacters.json`
+  - Proveedor de datos para el módulo de Personajes
+  - Datos en formato JSON con información de personajes del juego Project Sekai
 
 ### ▶️ Ejecutar pruebas una sola vez
 
