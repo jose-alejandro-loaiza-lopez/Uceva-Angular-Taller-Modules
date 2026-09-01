@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CharactersService } from '../../services/characters.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { ListCharacters } from './list-characters';
 
@@ -8,7 +10,9 @@ describe('ListCharacters', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ListCharacters]
+      imports: [HttpClientTestingModule],
+      declarations: [ListCharacters],
+      providers: [CharactersService]
     })
     .compileComponents();
 
