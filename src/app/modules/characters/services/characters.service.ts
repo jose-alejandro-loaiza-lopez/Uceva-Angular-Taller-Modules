@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
     import { inject, Injectable } from '@angular/core';
     import { Observable } from 'rxjs';
+    import { CHARACTERS_API_URL } from '../../../core/config/characters.config';
     import { GameCharacter } from '../interfaces/characters.interface';
 
     /**
@@ -28,12 +29,6 @@ import { HttpClient } from '@angular/common/http';
       providedIn: 'root',
     })
     export class CharactersService {
-      /**
-       * URL de la API pública de personajes de Project Sekai.
-       */
-      private readonly apiUrl =
-        'https://sekai-world.github.io/sekai-master-db-en-diff/gameCharacters.json';
-
       /** Cliente HTTP inyectado con la función `inject()` de Angular */
       private readonly http = inject(HttpClient);
 
@@ -43,6 +38,6 @@ import { HttpClient } from '@angular/common/http';
        * @returns Observable con el listado completo de personajes (`GameCharacter[]`).
        */
       getAllCharacters(): Observable<GameCharacter[]> {
-        return this.http.get<GameCharacter[]>(this.apiUrl);
+        return this.http.get<GameCharacter[]>(CHARACTERS_API_URL);
       }
     }
