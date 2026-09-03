@@ -44,7 +44,7 @@
      * const gender: CharacterGender = 'female';
      * ```
      */
-    export type CharacterGender = 'male' | 'female';
+    export type CharacterGender = 'male' | 'female' | 'secret';
 
     /**
      * Unidad musical a la que pertenece el personaje.
