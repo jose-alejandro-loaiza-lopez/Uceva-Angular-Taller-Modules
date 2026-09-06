@@ -4,7 +4,7 @@
 
 - El objetivo del taller es practicar la creación y organización de módulos y componentes en una aplicación Angular.
 - Se consume una API externa pública: Sekai World Character Database.
-- Los módulos `users`, `products` y `tasks` consumen datos simulados (mock) definidos en `core/config`, mientras que el módulo `characters` consume la API externa.
+- Los módulos `users`, `products`, `products-tech` y `tasks` consumen datos simulados (mock) definidos en `core/config`, mientras que el módulo `characters` consume la API externa.
 
 ## 📋 Requisitos Previos
 

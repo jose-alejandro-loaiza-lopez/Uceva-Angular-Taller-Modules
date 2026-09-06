@@ -1,0 +1,39 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Marca</th>
+			<th scope="col">Categoria</th>
+			<th scope="col">Precio</th>
+			<th scope="col">Stock</th>
+			<th scope="col">Disponible</th>
+			<th scope="col">Rating</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (product of products; track product) {
+			<tr>
+				<th scope="row">{{ product.id }}</th>
+				<td>{{ product.name }}</td>
+				<td>{{ product.brand }}</td>
+				<td>
+					<app-badge
+						[text]="product.category"
+						[type]="categoryMap[product.category]"
+						[typeText]="categoryTextMap[product.category]" >
+					</app-badge>
+				</td>
+				<td>{{ product.price | currency }}</td>
+				<td>{{ product.stock }}</td>
+				<td>
+					<app-badge
+						[text]="product.isAvailable ? 'Disponible' : 'Agotado'"
+						[type]="product.isAvailable ? availabilityMap['Disponible'] : availabilityMap['Agotado']" >
+					</app-badge>
+				</td>
+				<td>{{ product.rating }}</td>
+			</tr>
+		}
+	</tbody>
+</table>
