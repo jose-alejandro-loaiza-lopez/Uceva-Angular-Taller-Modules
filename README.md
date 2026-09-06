@@ -43,7 +43,7 @@ Cuando el servidor esté en ejecución, abre un navegador y accede a: `http://lo
 
 El proyecto utiliza Jest para la ejecución de pruebas unitarias.
 
-El 98%+ de cobertura de código se logra gracias a los tests del servicio CharactersService y los componentes principales.
+El 100% de cobertura de código se logra gracias a los tests del servicio CharactersService y los componentes principales.
 
 ## 📚 APIs Consumidas
 
